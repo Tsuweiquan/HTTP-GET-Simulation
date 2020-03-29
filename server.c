@@ -64,3 +64,8 @@ void main(int argc, char **argv) {
         // reply with n ack for n objects ...
     }
 }
+
+// https://stackoverflow.com/questions/15445207/sending-image-jpeg-through-socket-in-c-linux
+// https://stackoverflow.com/questions/30582473/send-mp3-file-over-socket-in-c
+// https://www.geeksforgeeks.org/c-program-for-file-transfer-using-udp/
+// https://stackoverflow.com/questions/13215656/c-sendfile-and-send-difference
