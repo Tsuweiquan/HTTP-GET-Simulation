@@ -1,7 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<winSock2.h>
-// #include<sys/socket.h>
+#include<inttypes.h>
+#include<stdint.h>
+// #include<winSock2.h>
+#include<sys/socket.h>
 #include<sys/types.h>
 #include<netinet/in.h>
 #include<error.h>
@@ -9,18 +11,21 @@
 #include<unistd.h>
 #include<arpa/inet.h>
 
-#define MAX_DATA 1024
+typedef struct Packet {
+    uint16_t pktType;            // 1 --> Request Pkt || 2 --> Reply Pkt
+    uint16_t connectionType;     // 0 --> nonPersistent || 1 --> Persistent
+    uint16_t numObjects;         // numberOfObjects to be downloaded
+} Request_Packet;
 
 void main(int argc, char **argv) {
     struct sockaddr_in server;
     int sock;
-    char input[MAX_DATA];
-    char output[MAX_DATA];
+    int nbytes;
 
     if(argc != 3) {
         printf("Too few arguments \n");
 		printf("Usage: %s <IP address> <port number> \n", argv[0]);
-        printf("Example: ./client_non_persistent 192.168.1.233 80");
+        printf("Example: ./client_non_persistent 192.168.1.233 80\n");
 		exit(1);
     }
 
@@ -33,15 +38,65 @@ void main(int argc, char **argv) {
 
     server.sin_family = AF_INET;
     server.sin_port = htons(atoi(argv[2]));
-    server.sin_addr.s_addr = inet_addr(argc[1);
+    server.sin_addr.s_addr = inet_addr(argv[1]);
     bzero(&server.sin_zero, 8);
 
-    if((connect(sock, (struct sockaddr*) *server), sizeof(server)) < 0){
-        perror("Connection to server failed");
+    // Non Persistent. Always establish 3 way handshake by connect
+    if(connect(sock, (struct sockaddr*) &server, sizeof(server)) < 0){
+        perror("Connection to server failed\n");
         exit(1);
     }
+    printf("TCP connection completed!\n");
 
-    while(1) {
-        
+    // creating the Request Packet to send to server
+    Request_Packet p;
+    p.pktType = htons(1);
+    p.connectionType = htons(0);
+    p.numObjects = htons(0);
+    if (nbytes = write(sock, &p, sizeof(Request_Packet)) != sizeof(Request_Packet)) {
+        printf("error writing my message");
     }
+    
+    Request_Packet recv_packet;
+    if(recv(sock, (void *)&recv_packet, sizeof(Request_Packet), 0) < 0) {
+        printf("Receiving error, data length < 0 \n");
+        exit(-1);
+    }
+    uint16_t pktType = ntohs(recv_packet.pktType);
+    uint16_t connectionType = ntohs(recv_packet.connectionType);
+    uint16_t numObjects = ntohs(recv_packet.numObjects);
+    printf("Received pktType = %"PRIu16"\n", pktType );
+    printf("Received connectionType = %"PRIu16"\n", connectionType );
+    printf("Received numObjects = %"PRIu16"\n", numObjects );
+    close(sock);
+    
+    int totalObjectsDownloaded = 0;
+    for (int i = 1; i <= numObjects; i++ ) {
+        if((sock = socket(AF_INET, SOCK_STREAM, 0)) == -1)
+        {
+            perror("server socket: ");
+            exit(1);
+        }
+        server.sin_family = AF_INET;
+        server.sin_port = htons(atoi(argv[2]));
+        server.sin_addr.s_addr = inet_addr(argv[1]);
+        bzero(&server.sin_zero, 8);
+        // Non Persistent. Always establish 3 way handshake by connect
+        if(connect(sock, (struct sockaddr*) &server, sizeof(server)) < 0){
+            perror("Connection to server failed\n");
+            exit(1);
+        }
+        printf("TCP connection completed!\n");
+        // Send Request for Object i packet
+        Request_Packet requestObject;
+        requestObject.pktType = htons(1);
+        requestObject.connectionType = htons(0);
+        requestObject.numObjects = htons(i);
+        if (nbytes = write(sock, &requestObject, sizeof(Request_Packet)) != sizeof(Request_Packet)) {
+            printf("Request for Object %d failed.\n", i);
+        }
+        printf("Ready to receive file %d from server.\n", i);
+        close(sock);
+    }
+
 }
