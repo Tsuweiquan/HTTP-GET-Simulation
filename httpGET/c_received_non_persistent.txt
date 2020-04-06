@@ -1,0 +1,899 @@
+	<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+				<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>Overview &#8211; Computer Engineering @ NUS</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Computer Engineering @ NUS &raquo; Feed" href="https://ceg.nus.edu.sg/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Computer Engineering @ NUS &raquo; Comments Feed" href="https://ceg.nus.edu.sg/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/ceg.nus.edu.sg\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://ceg.nus.edu.sg/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fl-builder-layout-4-css'  href='/wp-content/uploads/sites/3/bb-plugin/cache/4-layout.css?ver=1bc9b055e9fc27c6f4a3d2b192fada5c' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='https://ceg.nus.edu.sg/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8.3' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='bootstrap-css'  href='/wp-content/themes/ceg-theme/css/bootstrap.min.css?ver=3.3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-font-css'  href='/wp-content/themes/ceg-theme/css/visual-composer-starter-font.min.css?ver=3.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-style-css'  href='/wp-content/themes/ceg-theme/css/slick.min.css?ver=1.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-general-css'  href='/wp-content/themes/ceg-theme/css/style.min.css?ver=3.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-woocommerce-css'  href='/wp-content/themes/ceg-theme/css/woocommerce.min.css?ver=3.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-responsive-css'  href='/wp-content/themes/ceg-theme/css/responsive.min.css?ver=3.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-style-css'  href='/wp-content/themes/ceg-theme/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='nus-style1-css'  href='/wp-content/themes/ceg-theme/css/nus/styles.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='nus-style2-css'  href='/wp-content/themes/ceg-theme/css/nus/styleguide.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='nus-style3-css'  href='/wp-content/themes/ceg-theme/css/nus/additional_style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='visualcomposerstarter-custom-style-css'  href='/wp-content/themes/ceg-theme/css/customizer-custom.css?ver=5.3.2' type='text/css' media='all' />
+<style id='visualcomposerstarter-custom-style-inline-css' type='text/css'>
+
+	/*Body fonts and style*/
+	body,
+	#main-menu ul li ul li,
+	.comment-content cite,
+	.entry-content cite,
+	#add_payment_method .cart-collaterals .cart_totals table small,
+	.woocommerce-cart .cart-collaterals .cart_totals table small,
+	.woocommerce-checkout .cart-collaterals .cart_totals table small,
+	.visualcomposerstarter.woocommerce-cart .woocommerce .cart-collaterals .cart_totals .cart-subtotal td,
+	.visualcomposerstarter.woocommerce-cart .woocommerce .cart-collaterals .cart_totals .cart-subtotal th,
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart,
+	.visualcomposerstarter.woocommerce .woocommerce-ordering,
+	.visualcomposerstarter.woocommerce .woocommerce-result-count,
+	.visualcomposerstarter legend,
+	.visualcomposerstarter.woocommerce-account .woocommerce-MyAccount-content a.button
+	 { font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; }
+	 body,
+	 .sidebar-widget-area a:hover, .sidebar-widget-area a:focus,
+	 .sidebar-widget-area .widget_recent_entries ul li:hover, .sidebar-widget-area .widget_archive ul li:hover, .sidebar-widget-area .widget_categories ul li:hover, .sidebar-widget-area .widget_meta ul li:hover, .sidebar-widget-area .widget_recent_entries ul li:focus, .sidebar-widget-area .widget_archive ul li:focus, .sidebar-widget-area .widget_categories ul li:focus, .sidebar-widget-area .widget_meta ul li:focus, .visualcomposerstarter.woocommerce-cart .woocommerce table.cart .product-name a { color: #555555; }
+	  .comment-content table,
+	  .entry-content table { border-color: #555555; }
+	  .entry-full-content .entry-author-data .author-biography,
+	  .entry-full-content .entry-meta,
+	  .nav-links.post-navigation a .meta-nav,
+	  .search-results-header h4,
+	  .entry-preview .entry-meta li,
+	  .entry-preview .entry-meta li a,
+	  .entry-content .gallery-caption,
+	  .comment-content blockquote,
+	  .entry-content blockquote,
+	  .wp-caption .wp-caption-text,
+	  .comments-area .comment-list .comment-metadata a { color: #777777; }
+	  .comments-area .comment-list .comment-metadata a:hover,
+	  .comments-area .comment-list .comment-metadata a:focus { border-bottom-color: #777777; }
+	  a,
+	  .comments-area .comment-list .reply a,
+	  .comments-area span.required,
+	  .comments-area .comment-subscription-form label:before,
+	  .entry-preview .entry-meta li a:hover:before,
+	  .entry-preview .entry-meta li a:focus:before,
+	  .entry-preview .entry-meta li.entry-meta-category:hover:before,
+	  .entry-content p a:hover,
+	  .entry-content ol a:hover,
+	  .entry-content ul a:hover,
+	  .entry-content table a:hover,
+	  .entry-content datalist a:hover,
+	  .entry-content blockquote a:hover,
+	  .entry-content dl a:hover,
+	  .entry-content address a:hover,
+	  .entry-content p a:focus,
+	  .entry-content ol a:focus,
+	  .entry-content ul a:focus,
+	  .entry-content table a:focus,
+	  .entry-content datalist a:focus,
+	  .entry-content blockquote a:focus,
+	  .entry-content dl a:focus,
+	  .entry-content address a:focus,
+	  .entry-content ul > li:before,
+	  .comment-content p a:hover,
+	  .comment-content ol a:hover,
+	  .comment-content ul a:hover,
+	  .comment-content table a:hover,
+	  .comment-content datalist a:hover,
+	  .comment-content blockquote a:hover,
+	  .comment-content dl a:hover,
+	  .comment-content address a:hover,
+	  .comment-content p a:focus,
+	  .comment-content ol a:focus,
+	  .comment-content ul a:focus,
+	  .comment-content table a:focus,
+	  .comment-content datalist a:focus,
+	  .comment-content blockquote a:focus,
+	  .comment-content dl a:focus,
+	  .comment-content address a:focus,
+	  .comment-content ul > li:before,
+	  .sidebar-widget-area .widget_recent_entries ul li,
+	  .sidebar-widget-area .widget_archive ul li,
+	  .sidebar-widget-area .widget_categories ul li,
+	  .sidebar-widget-area .widget_meta ul li { color: #557cbf; }     
+	  .comments-area .comment-list .reply a:hover,
+	  .comments-area .comment-list .reply a:focus,
+	  .comment-content p a,
+	  .comment-content ol a,
+	  .comment-content ul a,
+	  .comment-content table a,
+	  .comment-content datalist a,
+	  .comment-content blockquote a,
+	  .comment-content dl a,
+	  .comment-content address a,
+	  .entry-content p a,
+	  .entry-content ol a,
+	  .entry-content ul a,
+	  .entry-content table a,
+	  .entry-content datalist a,
+	  .entry-content blockquote a,
+	  .entry-content dl a,
+	  .entry-content address a { border-bottom-color: #eee; }    
+	  .entry-content blockquote, .comment-content { border-left-color: #557cbf; }
+	  
+	  html, #main-menu ul li ul li { font-size: 16px }
+	  body, #footer, .footer-widget-area .widget-title { line-height: 1.7; }
+	  body {
+		letter-spacing: 0.01rem;
+		font-weight: 400;
+		font-style: normal;
+		text-transform: none;
+	  }
+	  
+	  .comment-content address,
+	  .comment-content blockquote,
+	  .comment-content datalist,
+	  .comment-content dl,
+	  .comment-content ol,
+	  .comment-content p,
+	  .comment-content table,
+	  .comment-content ul,
+	  .entry-content address,
+	  .entry-content blockquote,
+	  .entry-content datalist,
+	  .entry-content dl,
+	  .entry-content ol,
+	  .entry-content p,
+	  .entry-content table,
+	  .entry-content ul {
+		margin-top: 0;
+		margin-bottom: ;
+	  }
+	  
+	  /*Buttons font and style*/
+	  .comments-area .form-submit input[type=submit],
+	  .blue-button { 
+			background-color: #557cbf; 
+			color: #f4f4f4;
+			font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			font-style: normal;
+			letter-spacing: 0.01rem;
+			line-height: 1;
+			text-transform: none;
+			margin-top: 0;
+			margin-bottom: 0;
+	  }
+	  .visualcomposerstarter .products .added_to_cart {
+			font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	  }
+	  .comments-area .form-submit input[type=submit]:hover, .comments-area .form-submit input[type=submit]:focus,
+	  .blue-button:hover, .blue-button:focus, 
+	  .entry-content p a.blue-button:hover { 
+			background-color: #3c63a6; 
+			color: #f4f4f4; 
+	  }
+	  
+	  .nav-links.archive-navigation .page-numbers,
+	  .visualcomposerstarter.woocommerce nav.woocommerce-pagination ul li .page-numbers {
+	        background-color: #557cbf; 
+			color: #f4f4f4;
+	  }
+	  
+	  .nav-links.archive-navigation a.page-numbers:hover, 
+	  .nav-links.archive-navigation a.page-numbers:focus, 
+	  .nav-links.archive-navigation .page-numbers.current,
+	  .visualcomposerstarter.woocommerce nav.woocommerce-pagination ul li .page-numbers:hover, 
+	  .visualcomposerstarter.woocommerce nav.woocommerce-pagination ul li .page-numbers:focus, 
+	  .visualcomposerstarter.woocommerce nav.woocommerce-pagination ul li .page-numbers.current {
+	        background-color: #3c63a6; 
+			color: #f4f4f4; 
+	  }
+	  .visualcomposerstarter.woocommerce button.button,
+	  .visualcomposerstarter.woocommerce a.button.product_type_simple,
+	  .visualcomposerstarter.woocommerce a.button.product_type_grouped,
+	  .visualcomposerstarter.woocommerce a.button.product_type_variable,
+	  .visualcomposerstarter.woocommerce a.button.product_type_external,
+	  .visualcomposerstarter .woocommerce .buttons a.button.wc-forward,
+	  .visualcomposerstarter .woocommerce #place_order,
+	  .visualcomposerstarter .woocommerce .button.checkout-button,
+	  .visualcomposerstarter .woocommerce .button.wc-backward,
+	  .visualcomposerstarter .woocommerce .track_order .button,
+	  .visualcomposerstarter .woocommerce .vct-thank-you-footer a,
+	  .visualcomposerstarter .woocommerce .woocommerce-EditAccountForm .button,
+	  .visualcomposerstarter .woocommerce .woocommerce-MyAccount-content a.edit,
+	  .visualcomposerstarter .woocommerce .woocommerce-mini-cart__buttons.buttons a,
+	  .visualcomposerstarter .woocommerce .woocommerce-orders-table__cell .button,
+	  .visualcomposerstarter .woocommerce a.button,
+	  .visualcomposerstarter .woocommerce button.button,
+	  .visualcomposerstarter #review_form #respond .form-submit .submit
+	   {
+	  		background-color: #557cbf; 
+			color: #f4f4f4;
+			font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			font-style: normal;
+			letter-spacing: 0.01rem;
+			line-height: 1;
+			text-transform: none;
+			margin-top: 0;
+			margin-bottom: 0;
+	  }
+	  .visualcomposerstarter.woocommerce button.button.alt.disabled {
+            background-color: #557cbf; 
+			color: #f4f4f4;
+	  }
+	  .visualcomposerstarter.woocommerce a.button:hover,
+	  .visualcomposerstarter.woocommerce a.button:focus,
+	  .visualcomposerstarter.woocommerce button.button:hover,
+	  .visualcomposerstarter.woocommerce button.button:focus,
+	  .visualcomposerstarter .woocommerce #place_order:hover,
+	  .visualcomposerstarter .woocommerce .button.checkout-button:hover,
+	  .visualcomposerstarter .woocommerce .button.wc-backward:hover,
+	  .visualcomposerstarter .woocommerce .track_order .button:hover,
+	  .visualcomposerstarter .woocommerce .vct-thank-you-footer a:hover,
+	  .visualcomposerstarter .woocommerce .woocommerce-EditAccountForm .button:hover,
+	  .visualcomposerstarter .woocommerce .woocommerce-MyAccount-content a.edit:hover,
+	  .visualcomposerstarter .woocommerce .woocommerce-mini-cart__buttons.buttons a:hover,
+	  .visualcomposerstarter .woocommerce .woocommerce-orders-table__cell .button:hover,
+	  .visualcomposerstarter .woocommerce a.button:hover,
+	  .visualcomposerstarter #review_form #respond .form-submit .submit:hover
+	  .visualcomposerstarter .woocommerce #place_order:focus,
+	  .visualcomposerstarter .woocommerce .button.checkout-button:focus,
+	  .visualcomposerstarter .woocommerce .button.wc-backward:focus,
+	  .visualcomposerstarter .woocommerce .track_order .button:focus,
+	  .visualcomposerstarter .woocommerce .vct-thank-you-footer a:focus,
+	  .visualcomposerstarter .woocommerce .woocommerce-EditAccountForm .button:focus,
+	  .visualcomposerstarter .woocommerce .woocommerce-MyAccount-content a.edit:focus,
+	  .visualcomposerstarter .woocommerce .woocommerce-mini-cart__buttons.buttons a:focus,
+	  .visualcomposerstarter .woocommerce .woocommerce-orders-table__cell .button:focus,
+	  .visualcomposerstarter .woocommerce a.button:focus,
+	  .visualcomposerstarter #review_form #respond .form-submit .submit:focus { 
+			background-color: #3c63a6; 
+			color: #f4f4f4; 
+	  }
+	
+	/*Headers fonts and style*/
+	.header-widgetised-area .widget_text,
+	 #main-menu > ul > li > a, 
+	 .entry-full-content .entry-author-data .author-name, 
+	 .nav-links.post-navigation a .post-title, 
+	 .comments-area .comment-list .comment-author,
+	 .comments-area .comment-list .reply a,
+	 .comments-area .comment-form-comment label,
+	 .comments-area .comment-form-author label,
+	 .comments-area .comment-form-email label,
+	 .comments-area .comment-form-url label,
+	 .comment-content blockquote,
+	 .entry-content blockquote { font-family: Helvetica Neue,Helvetica,Arial,sans-serif; }
+	.entry-full-content .entry-author-data .author-name,
+	.entry-full-content .entry-meta a,
+	.nav-links.post-navigation a .post-title,
+	.comments-area .comment-list .comment-author,
+	.comments-area .comment-list .comment-author a,
+	.search-results-header h4 strong,
+	.entry-preview .entry-meta li a:hover,
+	.entry-preview .entry-meta li a:focus { color: #333333; }
+	
+	.entry-full-content .entry-meta a,
+	.comments-area .comment-list .comment-author a:hover,
+	.comments-area .comment-list .comment-author a:focus,
+	.nav-links.post-navigation a .post-title { border-bottom-color: #333333; }
+
+	 
+	 h1 {
+		color: #333333;
+		font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+		font-size: 34px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 2.125rem;
+		text-transform: none;  
+	 }
+	 h1 a {color: #557cbf;}
+	 h1 a:hover, h1 a:focus {color: #557cbf;}
+	 h2 {
+		color: #333333;
+		font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+		font-size: 30px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 0.625rem;
+		text-transform: none;  
+	 }
+	 h2 a {color: #557cbf;}
+	 h2 a:hover, h2 a:focus {color: #557cbf;}
+	 h3 {
+		color: #ef7c00;
+		font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+		font-size: 24px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: ;
+		margin-bottom: ;
+		text-transform: none;  
+	 }
+	 h3 a {color: #ef7c00;}
+	 h3 a:hover, h3 a:focus {color: #ef7c00;}
+	 h4 {
+		color: #333333;
+		font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+		font-size: 22px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 0.625rem;
+		text-transform: none;  
+	 }
+	 h4 a {color: #557cbf;}
+	 h4 a:hover, h4 a:focus {color: #557cbf;}
+	 h5 {
+		color: #333333;
+		font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+		font-size: 22px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 0.625rem;
+		text-transform: none;  
+	 }
+	 h5 a {color: #557cbf;}
+	 h5 a:hover, h5 a:focus {color: #557cbf;}
+	 h6 {
+		color: #333333;
+		font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0.01rem;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: ;
+		text-transform: none;  
+	 }
+	 h6 a {color: #557cbf;}
+	 h6 a:hover, h6 a:focus {color: #557cbf;}
+	
+		/*Header and menu area background color*/
+		#header .navbar .navbar-wrapper,
+		body.navbar-no-background #header .navbar.fixed.scroll,
+		body.header-full-width-boxed #header .navbar,
+		body.header-full-width #header .navbar {
+			background-color: #ffffff;
+		}
+		
+		@media only screen and (min-width: 768px) {
+			body:not(.menu-sandwich) #main-menu ul li ul { background-color: #ffffff; }
+		}
+		body.navbar-no-background #header .navbar {background-color: transparent;}
+		
+	.visualcomposerstarter.woocommerce ul.products li.product .price,
+	.visualcomposerstarter.woocommerce div.product p.price,
+	.visualcomposerstarter.woocommerce div.product p.price ins,
+	.visualcomposerstarter.woocommerce div.product span.price,
+	.visualcomposerstarter.woocommerce div.product span.price ins,
+	.visualcomposerstarter.woocommerce.widget .quantity,
+	.visualcomposerstarter.woocommerce.widget del,
+	.visualcomposerstarter.woocommerce.widget ins,
+	.visualcomposerstarter.woocommerce.widget span.woocommerce-Price-amount.amount,
+	.visualcomposerstarter.woocommerce p.price ins,
+	.visualcomposerstarter.woocommerce p.price,
+	.visualcomposerstarter.woocommerce span.price,
+	.visualcomposerstarter.woocommerce span.price ins,
+	.visualcomposerstarter .woocommerce.widget span.amount,
+	.visualcomposerstarter .woocommerce.widget ins {
+		color: #2b4b80
+	}
+	
+	.visualcomposerstarter.woocommerce span.price del,
+	.visualcomposerstarter.woocommerce p.price del,
+	.visualcomposerstarter.woocommerce p.price del span,
+	.visualcomposerstarter.woocommerce span.price del span,
+	.visualcomposerstarter .woocommerce.widget del,
+	.visualcomposerstarter .woocommerce.widget del span.amount,
+	.visualcomposerstarter.woocommerce ul.products li.product .price del {
+		color: #d5d5d5
+	}
+	
+	.visualcomposerstarter .vct-cart-items-count {
+	    background: #2b4b80;
+	    color: #fff;
+	}
+	.visualcomposerstarter .vct-cart-wrapper svg g>g {
+	    fill: #2b4b80;
+	}
+	
+	.visualcomposerstarter.woocommerce div.product .entry-categories a,
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li a
+	{
+		color: #d5d5d5;
+	}
+	
+	.visualcomposerstarter.woocommerce div.product .entry-categories a:hover,
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart .product-name a:hover,
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
+	.visualcomposerstarter.woocommerce div.product .entry-categories a:focus,
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart .product-name a:focus,
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li a:focus,
+	{
+		color: #2b4b80;
+	}
+	
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li.active a
+	{
+		color: #2b4b80;
+	}
+	.visualcomposerstarter.woocommerce div.product .woocommerce-tabs ul.tabs li.active a:before
+	{
+		background: #2b4b80;
+	}
+	
+	.woocommerce button.button[name="update_cart"],
+    .button[name="apply_coupon"],
+    .vct-checkout-button,
+    .woocommerce button.button:disabled, 
+    .woocommerce button.button:disabled[disabled]
+	{
+		color: #4e4e4e;
+	}
+	.visualcomposerstarter .woocommerce.widget.widget_price_filter .ui-slider .ui-slider-handle,
+	.visualcomposerstarter .woocommerce.widget.widget_price_filter .ui-slider .ui-slider-range
+	{
+		background-color: #2b4b80;
+	}
+	.visualcomposerstarter .woocommerce.widget li a
+	{
+		color: #000;
+	}
+	.visualcomposerstarter .woocommerce.widget li a:hover,
+	.visualcomposerstarter .woocommerce.widget li a:focus
+	{
+		color: #2b4b80;
+	}
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart a.remove:before,
+	.visualcomposerstarter .woocommerce.widget .cart_list li a.remove:before,
+	.visualcomposerstarter.woocommerce-cart .woocommerce table.cart a.remove:after,
+	.visualcomposerstarter .woocommerce.widget .cart_list li a.remove:after
+	{
+		background-color: #d5d5d5;
+	}
+</style>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var visualcomposerstarter = {"ajax_url":"https:\/\/ceg.nus.edu.sg\/wp-admin\/admin-ajax.php","nonce":"10f56941c8","woo_coupon_form":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://ceg.nus.edu.sg/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://ceg.nus.edu.sg/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://ceg.nus.edu.sg/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8.3'></script>
+<script type='text/javascript' src='https://ceg.nus.edu.sg/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8.3'></script>
+<script type='text/javascript' src='/wp-content/themes/ceg-theme/cegjs.js?ver=5.3.2'></script>
+<link rel='https://api.w.org/' href='https://ceg.nus.edu.sg/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ceg.nus.edu.sg/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://ceg.nus.edu.sg/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="https://ceg.nus.edu.sg/about/overview/" />
+<link rel='shortlink' href='https://ceg.nus.edu.sg/?p=4' />
+<link rel="alternate" type="application/json+oembed" href="https://ceg.nus.edu.sg/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fceg.nus.edu.sg%2Fabout%2Foverview%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://ceg.nus.edu.sg/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fceg.nus.edu.sg%2Fabout%2Foverview%2F&#038;format=xml" />
+<meta name="generator" content="Powered by Slider Revolution 5.4.8.3 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">function setREVStartSize(e){									
+						try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+							if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+						}catch(d){console.log("Failure at Presize of Slider:"+d)}						
+					};</script>
+		<style type="text/css" id="wp-custom-css">
+			@media (min-width:768px){
+.quicklinkmobile{display:none}
+}		</style>
+			</head>
+<body class="page-template-default page page-id-4 page-child parent-pageid-33 wp-custom-logo fl-builder visualcomposerstarter">
+		<header id="header">
+		<nav class="navbar">
+			<div class="container">
+
+			
+				
+				<div class="navbar-wrapper clearfix">
+						
+					<div class="navbar-header col-md-8">
+						<div class="navbar-brand">
+							<a href="https://ceg.nus.edu.sg/" class="custom-logo-link" rel="home"><img width="140" height="64" src="/wp-content/uploads/sites/3/2019/05/cropped-logo.png" class="custom-logo" alt="Computer Engineering @ NUS" /></a>
+						</div>
+																			<button type="button" class="navbar-toggle">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+											</div>						
+					
+							<div style="float:right" class="col-md-4 hidden-xs hidden-sm">
+								<!-- QUICKLINKS -->
+								<div class="nus-quicklinks">
+								  <ul class="box nav nav-pills">
+								    <li><a href="http://exchange.nus.edu.sg/" target="_blank">Email</a></li>
+								    <li><a href="https://luminus.nus.edu.sg/" target="_blank">LumiNUS</a></li>
+								    <li><a href="http://www.lib.nus.edu.sg/" target="_blank">Library</a></li>
+								    <li><a href="http://www.nus.edu.sg/campusmap" target="_blank">Map</a></li>
+                                    <li><a href="https://myportal.nus.edu.sg/studentportal/alerts/all/" target="_blank">Student</a></li>
+							    </ul>
+								</div>
+								<!-- //QUICKLINKS -->
+							</div>					
+
+					
+				</div><!--.navbar-wrapper-->
+				
+				
+										
+			
+					<div class="container clearfix">
+						
+							
+						<div id="main-menu" class="nus-megamenu">
+							<div class="button-close"><span class="vct-icon-close"></span></div>
+							
+							<ul id="menu-top-menu" class="nav navbar-nav"><li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="/">Home</a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-17"><a href="#">About CEG</a>
+<ul class="sub-menu">
+	<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-16"><a href="https://ceg.nus.edu.sg/about/overview/" aria-current="page">Overview</a></li>
+	<li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><a href="https://ceg.nus.edu.sg/about/programme-objectives/">Programme Objectives</a></li>
+	<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="https://ceg.nus.edu.sg/about/slo/">Student Learning Outcomes</a></li>
+	<li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><a href="https://ceg.nus.edu.sg/about/people/">People</a></li>
+</ul>
+</li>
+<li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-25"><a href="#">Curriculum</a>
+<ul class="sub-menu">
+	<li id="menu-item-289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-289"><a href="https://ceg.nus.edu.sg/curriculum/">Overview</a></li>
+	<li id="menu-item-1753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1753"><a href="https://ceg.nus.edu.sg/curriculum/requirements/">Programme Requirements</a></li>
+	<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://ceg.nus.edu.sg/curriculum/electives-ay17/">Technical Electives</a></li>
+</ul>
+</li>
+<li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-54"><a href="#">Prospective Students</a>
+<ul class="sub-menu">
+	<li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a href="https://ceg.nus.edu.sg/welcome/">Welcome</a></li>
+	<li id="menu-item-1550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1550"><a href="https://ceg.nus.edu.sg/admissions/exploreceg/">Explore CEG</a></li>
+	<li id="menu-item-1551" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1551"><a href="https://ceg.nus.edu.sg/admissions/">Admission Requirements</a></li>
+	<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="https://ceg.nus.edu.sg/admissions/jointprog/">Joint Programmes</a></li>
+	<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://ceg.nus.edu.sg/admissions/nyp/">Modular Exemptions</a></li>
+</ul>
+</li>
+<li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-91"><a href="#">Current Students</a>
+<ul class="sub-menu">
+	<li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="https://ceg.nus.edu.sg/students/">Notice Board</a></li>
+	<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57"><a href="https://ceg.nus.edu.sg/students/first_year/">First Year</a></li>
+	<li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="https://ceg.nus.edu.sg/students/second_year/">Second Year</a></li>
+	<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="https://ceg.nus.edu.sg/students/third_year/">Third Year</a></li>
+	<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="https://ceg.nus.edu.sg/students/final_year/">Final Year</a></li>
+	<li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86"><a href="https://ceg.nus.edu.sg/students/special/">Special Programmes</a></li>
+	<li id="menu-item-85" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a href="https://ceg.nus.edu.sg/students/achievements/">Achievements &amp; News</a></li>
+	<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="https://ceg.nus.edu.sg/students/awards/">Awards</a></li>
+	<li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="https://ceg.nus.edu.sg/students/finance/">Financial Matters</a></li>
+</ul>
+</li>
+</ul>															<div class="header-widgetised-area">
+									<section id="search-4" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://ceg.nus.edu.sg/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+</section>								</div>
+							                                                     <!-- Mobile Quicklink BEGIN -->
+
+<div class="displaymobile"> 
+	
+	<div class="module-xt">	
+		
+		<div style="font-size:+1.2em; color:white;margin-bottom: 20px">Overview</div>
+		
+	</div>
+	
+	
+	<h3 style="font-size:18px;"><span>Quick Links</span></h3>
+											<div class="module-xt">
+							<div class="menu-cegfooter-container"><ul id="menu-cegfooter" class="menu"><li id="menu-item-1600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1600"><a href="https://www.eng10.nus.edu.sg/intranet/advisor/">Academic Advisor/Mentor Portal</a></li>
+<li id="menu-item-1601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601"><a href="https://ceg.nus.edu.sg/students/awards/">Awards</a></li>
+<li id="menu-item-1602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1602"><a href="https://ceg.nus.edu.sg/students/ffg_checklists/">AFG/FFG Checklists</a></li>
+<li id="menu-item-1599" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1599"><a href="https://ceg.nus.edu.sg/cg4001/">Final Year Project</a></li>
+<li id="menu-item-1603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1603"><a href="https://ceg.nus.edu.sg/students/studyschedule/">Recommended Study Schedules</a></li>
+<li id="menu-item-1604" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1604"><a href="http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/continuation-and-graduation-requirements#SU">S/U Policy</a></li>
+</ul></div>					   </div>
+						
+	
+	<h3 style="font-size:18px;"><span>Computer Science</span></h3>
+											<div class="module-xt">
+							<div class="menu-cegfooter2-container"><ul id="menu-cegfooter2" class="menu"><li id="menu-item-1637" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1637"><a href="https://www.comp.nus.edu.sg/about/depts/cs/">CS Home</a></li>
+<li id="menu-item-1638" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1638"><a href="https://www.comp.nus.edu.sg/studentlife/">Student Life</a></li>
+<li id="menu-item-1639" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1639"><a href="https://www.comp.nus.edu.sg/">NUS Computing</a></li>
+</ul></div>					   </div>
+						
+
+	<h3 style="font-size:18px;"><span>EC Engineering</span></h3>
+											<div class="module-xt">
+							<div class="menu-cegfooter3-container"><ul id="menu-cegfooter3" class="menu"><li id="menu-item-1640" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1640"><a href="https://www.eng.nus.edu.sg/ece/">ECE Home</a></li>
+<li id="menu-item-1641" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1641"><a href="https://www.eng.nus.edu.sg/ece/student-life/">Student Life</a></li>
+<li id="menu-item-1642" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1642"><a href="http://ece.nus.edu.sg/drupal/?q=node/213">EConnEct</a></li>
+<li id="menu-item-1643" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1643"><a href="https://www.eng.nus.edu.sg/">NUS Engineering</a></li>
+</ul></div>					   </div>
+							
+	
+	
+</div>
+                                                     <!-- Mobile Quicklink END  -->
+													</div><!--#main-menu-->
+							
+    					
+					</div>
+									
+							
+ 				
+                				
+				
+			</div><!--.container-->
+		</nav>
+
+<div class="nus-department-header">
+                               <div class="blue"><!-- change to 'blue' , 'grey' , or 'orange' to see background color changes -->
+                               <div class="container">
+                                <h2>
+									<a style="color: white" href="https://ceg.nus.edu.sg/" title="Computer Engineering @ NUS">
+										Computer Engineering @ NUS									</a>
+								</h2>
+                               </div>
+                               </div>
+                               </div>		
+		
+							<div class="header-image">
+							</div>
+			</header>
+		<div class="container">
+		<div class="content-wrapper">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="main-content">
+						<h1 class="entry-title">Overview</h1>
+<br/>
+
+<div class="entry-content">
+	
+	<div class="fl-builder-content fl-builder-content-4 fl-builder-content-primary" data-post-id="4"><div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5cfe075aa1e51" data-node="5cfe075aa1e51">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-full-width fl-node-content">
+		
+<div class="fl-col-group fl-node-5cfe075aa2bea" data-node="5cfe075aa2bea">
+			<div class="fl-col fl-node-5cfe075aa2ccc" data-node="5cfe075aa2ccc">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-rich-text fl-node-5cfe075aa416f" data-node="5cfe075aa416f">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-rich-text">
+	<p style="text-align: justify;">The <span class="style2 style10">Computer Engineering</span> programme(CEG) at NUS prepares its graduates to embark on a lifelong journey in designing computing systems for a smarter world – hence our theme <span class="style2 style10">"Designing Intelligence"</span>.</p>
+<p style="text-align: justify;">A sophisticated piece of hardware is useless without the software that <span class="style2 style10">brings it to life</span>. Computer engineers introduce intelligence into every conceivable device --- from the smart phone that you cannot live without, to massive industrial control systems that power economies. They create the electronic systems in a modern car containing dozens of computing systems communicating through a network. They connect the physical world with cyberspace to enhance everything from entertainment to healthcare and the environment. CEG gives you the skills and knowledge to <span class="style2 style10">engineer exciting solutions</span> that move as well as change the world.</p>
+<p style="text-align: justify;">A uniquely <span class="style2 style10">multi-disciplinary</span> programme, CEG transcends the traditional boundary of computer science and electrical engineering. You will enjoy the resources and opportunities offered by both the host departments: <a href="http://www.comp.nus.edu.sg/about/depts/cs/" target="_blank" rel="noopener noreferrer">Computer Science</a> and <a href="https://www.ece.nus.edu.sg" target="_blank" rel="noopener noreferrer">Electrical &amp; Computer Engineering</a>. The curriculum aims to bring real-world problems, solutions, and experiences into the university environment. You will have the opportunity to consolidate your knowledge through a unique <span class="style2 style10">Full-Year industrial attachment</span>, and through overseas work or learning experience. With the solid fundamentals that the NUS Computer Engineering degree will give you, only imagination and ambition will be your limits.</p>
+</div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+</div>		
+</div><!--.entry-content-->
+					</div><!--.main-content-->
+				</div><!--.col-md-12-->
+
+				
+			</div><!--.row-->
+		</div><!--.content-wrapper-->
+	</div><!--.container-->
+
+<div class="nus-breadcrumbs">
+  <div class="container">
+<div id="crumbs"><a href="https://ceg.nus.edu.sg">Home</a> &raquo; <a href="https://ceg.nus.edu.sg/about/">About</a> &raquo; <span class="currentpage">Overview</span></div>  </div>
+</div>	
+
+		<footer id="footer">
+		
+				<footer class="nus-footer">
+					
+					
+					<!-- FOOT NAVIGATION - START -->
+					<div class="container">
+						<div class="row wrapper navigator">
+							
+                        
+<!-- First Column start -->                        
+                        
+							<div class="col-lg-3 col-md-3 col-sm-3 hidden-sm hidden-xs">
+								<div class="nus-module module">
+								  <div class="module-inner">
+								    <h3 class="title "><span>Quick Links</span></h3>
+
+											<div class="module-ct">
+							<div class="menu-cegfooter-container"><ul id="menu-cegfooter-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1600"><a href="https://www.eng10.nus.edu.sg/intranet/advisor/">Academic Advisor/Mentor Portal</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601"><a href="https://ceg.nus.edu.sg/students/awards/">Awards</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1602"><a href="https://ceg.nus.edu.sg/students/ffg_checklists/">AFG/FFG Checklists</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1599"><a href="https://ceg.nus.edu.sg/cg4001/">Final Year Project</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1603"><a href="https://ceg.nus.edu.sg/students/studyschedule/">Recommended Study Schedules</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1604"><a href="http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/continuation-and-graduation-requirements#SU">S/U Policy</a></li>
+</ul></div>					   </div>
+															   
+		
+							    </div>
+								</div>
+							</div>
+
+<!-- First Column ends -->     
+
+<!-- Second Column starts -->              
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-sm hidden-xs">
+		<div class="col-md-12">
+		      <div class="module-inner">
+					       <h3 class="title "><span>Computer Science</span></h3>
+				  
+											<div class="module-ct">
+							<div class="menu-cegfooter2-container"><ul id="menu-cegfooter2-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1637"><a href="https://www.comp.nus.edu.sg/about/depts/cs/">CS Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1638"><a href="https://www.comp.nus.edu.sg/studentlife/">Student Life</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1639"><a href="https://www.comp.nus.edu.sg/">NUS Computing</a></li>
+</ul></div>					   </div>
+										  
+
+             </div>
+	     </div>
+</div>
+<!-- Second Column ends --> 
+
+<!-- Third Column starts -->                            
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-sm hidden-xs">
+		<div class="col-md-12">
+			   <div class="module-inner">
+					     <h3 class="title "><span>Electrical & Computer Engineering</span></h3>								   
+
+											<div class="module-ct">
+							<div class="menu-cegfooter3-container"><ul id="menu-cegfooter3-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1640"><a href="https://www.eng.nus.edu.sg/ece/">ECE Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1641"><a href="https://www.eng.nus.edu.sg/ece/student-life/">Student Life</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1642"><a href="http://ece.nus.edu.sg/drupal/?q=node/213">EConnEct</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1643"><a href="https://www.eng.nus.edu.sg/">NUS Engineering</a></li>
+</ul></div>					   </div>
+								   
+									   
+						        
+		       </div>
+	    </div>  
+</div> 
+<!-- Third Column ends -->     
+
+<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+<div class="nus-social-box">
+
+<div class="nus-module module">
+<div class="module-inner">
+
+<div class="module-ct">
+    <ul class="nus-contact-us">
+      <li><span class="icon faicon fa-email"></span><a href="mailto:askCEG@nus.edu.sg">askCEG@nus.edu.sg</a></li>
+   </ul>
+</div>
+
+<p>&nbsp;</p>
+
+<h3 class="title"><span style="line-height:24px;">Department of Computer Science</span></h3>
+
+<div class="module-ct">
+    <ul class="nus-contact-us">
+      <li><span class="icon faicon fa-address"></span>Computing 1<br>
+          13 Computing Drive<br>Singapore 117417
+      </li>
+      <li><span class="icon faicon fa-phone"></span>+65 6516 2727
+      </li>
+
+    </ul>
+</div>
+
+<br />
+
+<h3 class="title">
+<span style="line-height:24px;">Department of Electrical and Computer Engineering</span>
+</h3>
+
+<div class="module-ct">
+    <ul class="nus-contact-us">
+      <li><span class="icon faicon fa-address"></span>Block E4, Level 5, Room 42<br>
+          4 Engineering Drive 3<br>Singapore 117583<br>National University of Singapore
+      </li>
+      <li><span class="icon faicon fa-phone"></span>+65 6516 2109
+      </li>
+
+    </ul>
+</div>
+
+</div>
+</div>
+               
+                                    <!--Social Media -->
+								  <div class="nus-module module footnav-alt">
+									  <div class="module-inner">
+									    <div class="module-ct">
+									      <div> <a href="https://www.facebook.com/NusSchoolOfComputing" target="_blank"><img src="/ceg/wp-content/uploads/sites/3/2019/05/facebook.png" alt="facebook" width="32" height="32"></a>&nbsp; <a href="https://twitter.com/nuscomputing" target="_blank"><img src="/ceg/wp-content/uploads/sites/3/2019/05/twitter.png" alt="twitter" width="32" height="32"></a> </div>
+								        </div>
+							        </div>
+								  </div>
+                                  
+                                    
+                                    
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<!-- FOOT NAVIGATION - END -->
+					
+					
+					<!-- FOOTER - COPYRIGHT - START -->
+					<div class="copyright">
+						<div class="container">
+							<div class="row">
+							  <div class="info">&copy; <a href="http://www.nus.edu.sg/">National University of Singapore</a>. All Rights Reserved.</div>
+							
+							<div>
+							  <ul class="nav-copyright">
+							    <li><a href="http://www.nus.edu.sg/legal-information-notices">Legal</a></li>
+							    <li class="bullet"><a href="#">Branding guidelines</a></li>
+						      </ul>
+						    </div>
+							</div>
+						</div>
+					</div>
+					<!-- FOOTER - COPYRIGHT - END -->
+					
+					
+	</footer>
+	<script type='text/javascript' src='/wp-content/uploads/sites/3/bb-plugin/cache/4-layout.js?ver=1bc9b055e9fc27c6f4a3d2b192fada5c'></script>
+<script type='text/javascript' src='/wp-content/themes/ceg-theme/js/bootstrap/transition.min.js?ver=3.3.7'></script>
+<script type='text/javascript' src='/wp-content/themes/ceg-theme/js/bootstrap/collapse.min.js?ver=3.3.7'></script>
+<script type='text/javascript' src='/wp-content/themes/ceg-theme/js/slick/slick.min.js?ver=1.6.0'></script>
+<script type='text/javascript' src='/wp-content/themes/ceg-theme/js/functions.min.js?ver=3.0.1'></script>
+<script type='text/javascript' src='https://ceg.nus.edu.sg/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+</body>
+</html>

@@ -1,17 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<inttypes.h>
-#include<stdint.h>
 #include <sys/sendfile.h>
 #include <stdbool.h> 
-// #include<WinSock2.h>
-#include<sys/socket.h>
 #include<errno.h>
 #include<string.h>
-#include<sys/types.h>
 #include<fcntl.h>
-#include<netinet/in.h>
-#include<error.h>
 #include<strings.h>
 #include<unistd.h>
 #include<arpa/inet.h>
@@ -204,10 +197,73 @@ void main(int argc, char **argv) {
                     content_len -= sent_bytes;
                     printf("Server sent %d bytes from file's data, offset is now : %ld and remaining data = %d\n", sent_bytes, offset, content_len);
             }
-            printf("sent bytes: %d\n", sent_bytes);
             close(fd);
             close(newfd);
         }
+    } else {                        // Persistent Connection
+        for (int i = 0; i < TOTAL_OBJECTS; i++) {
+            if(recv(newfd, data, PKT_SIZE, 0) < 0) {
+                printf("Receiving error, data length < 0 \n");
+                exit(-1);
+            }
+            printf("Received packet from client. \n");
+            printf("%s\n", data);
+
+            if (i == 0){
+                sendfd = open(FILE_1, O_RDONLY);
+                if (sendfd == -1) {
+                    fprintf(stderr, "Error opening file --> %s", strerror(errno));
+                    exit(EXIT_FAILURE);
+                }
+                /* Get file stats */
+                if (fstat(sendfd, &file_stat) < 0){
+                    fprintf(stderr, "Error fstat --> %s", strerror(errno));
+                    exit(EXIT_FAILURE);
+                }
+                content_len = file_stat.st_size;
+                sprintf(responseMSG, "HTTP/1.1 200 OK\r\nDate: Mon, 06 Apr 2020 12:28:53 GMT\r\nServer: Apache/2.2.14 (Win32)\r\nLast-Modified: Wed, 22 Jul 2009 19:15:56 GMT\r\nETag: \"34aa387-d-1568eb00\"\r\nVary: Authorization,Accept\r\nAccept-Ranges: bytes\r\nContent-Length: %d\r\nContent-Type: image/jpeg\r\nConnection: keep-alive\r\n\r\n", content_len);
+            } else if (i == 1){
+                sendfd = open(FILE_2, O_RDONLY);
+                if (sendfd == -1) {
+                    fprintf(stderr, "Error opening file --> %s", strerror(errno));
+                    exit(EXIT_FAILURE);
+                }
+                /* Get file stats */
+                if (fstat(sendfd, &file_stat) < 0){
+                    fprintf(stderr, "Error fstat --> %s", strerror(errno));
+                    exit(EXIT_FAILURE);
+                }
+                content_len = file_stat.st_size;
+                sprintf(responseMSG, "HTTP/1.1 200 OK\r\nDate: Mon, 06 Apr 2020 12:28:53 GMT\r\nServer: Apache/2.2.14 (Win32)\r\nLast-Modified: Wed, 22 Jul 2009 19:15:56 GMT\r\nETag: \"34aa387-d-1568eb00\"\r\nVary: Authorization,Accept\r\nAccept-Ranges: bytes\r\nContent-Length: %d\r\nContent-Type: audio/mpeg\r\nConnection: keep-alive\r\n\r\n", content_len);
+            } else {
+                sendfd = open(FILE_3, O_RDONLY);
+                if (sendfd == -1) {
+                    fprintf(stderr, "Error opening file --> %s", strerror(errno));
+                    exit(EXIT_FAILURE);
+                }
+                /* Get file stats */
+                if (fstat(sendfd, &file_stat) < 0){
+                    fprintf(stderr, "Error fstat --> %s", strerror(errno));
+                    exit(EXIT_FAILURE);
+                }
+                content_len = file_stat.st_size;
+                sprintf(responseMSG, "HTTP/1.1 200 OK\r\nDate: Mon, 06 Apr 2020 12:28:53 GMT\r\nServer: Apache/2.2.14 (Win32)\r\nLast-Modified: Wed, 22 Jul 2009 19:15:56 GMT\r\nETag: \"34aa387-d-1568eb00\"\r\nVary: Authorization,Accept\r\nAccept-Ranges: bytes\r\nContent-Length: %d\r\nContent-Type: txt/html\r\nConnection: keep-alive\r\n\r\n", content_len);
+            }
+
+            // send http response
+            if (nbytes = write(newfd, &responseMSG, sizeof(responseMSG)) != sizeof(responseMSG)) {
+                printf("Error Sending Reply\n");
+            }
+            printf("Sent HTTP Response Packet for Object %d.\n", i+1);
+            // now send the file 
+            offset = 0;
+            /* Sending file data */
+            while (((sent_bytes = sendfile(newfd, sendfd, &offset, BUFSIZ)) > 0) && (content_len > 0)){
+                    content_len -= sent_bytes;
+                    printf("Server sent %d bytes from file's data, offset is now : %ld and remaining data = %d\n", sent_bytes, offset, content_len);
+            }
+        }
+        close(newfd);
     }
 }
 // https://stackoverflow.com/questions/15445207/sending-image-jpeg-through-socket-in-c-linux

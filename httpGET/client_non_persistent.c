@@ -1,24 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<inttypes.h>
-#include<stdint.h>
-#include <sys/sendfile.h>
 #include <stdbool.h> 
-// #include<winSock2.h>
-#include<sys/socket.h>
 #include<errno.h>
-#include<sys/types.h>
-#include<netinet/in.h>
-#include<error.h>
 #include<string.h>
 #include<unistd.h>
 #include<arpa/inet.h>
 
+
 #define PKT_SIZE 1500
 #define IS_PERSISTENT "closed"
-#define FILE_1 "a_received.jpg"
-#define FILE_2 "b_received.mp3"
-#define FILE_3 "c_received.txt"
+#define FILE_1 "a_received_non_persistent.jpg"
+#define FILE_2 "b_received_non_persistent.mp3"
+#define FILE_3 "c_received_non_persistent.txt"
 
 void main(int argc, char **argv) {
     struct sockaddr_in server;
