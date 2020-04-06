@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<inttypes.h>
 #include<stdint.h>
+#include <sys/sendfile.h>
 // #include<winSock2.h>
 #include<sys/socket.h>
 #include<sys/types.h>
@@ -19,8 +20,7 @@ typedef struct Packet {
 
 void main(int argc, char **argv) {
     struct sockaddr_in server;
-    int sock;
-    int nbytes;
+    int sock, nbytes;
 
     if(argc != 3) {
         printf("Too few arguments \n");
@@ -53,6 +53,7 @@ void main(int argc, char **argv) {
     p.pktType = htons(1);
     p.connectionType = htons(0);
     p.numObjects = htons(0);
+    printf("Send HTTP Request Packet.\n");
     if (nbytes = write(sock, &p, sizeof(Request_Packet)) != sizeof(Request_Packet)) {
         printf("error writing my message");
     }
@@ -68,6 +69,7 @@ void main(int argc, char **argv) {
     printf("Received pktType = %"PRIu16"\n", pktType );
     printf("Received connectionType = %"PRIu16"\n", connectionType );
     printf("Received numObjects = %"PRIu16"\n", numObjects );
+    printf("Received HTTP Response Packet from Server. There is %d objects to be downloaded.\n", numObjects);
     close(sock);
     
     int totalObjectsDownloaded = 0;
@@ -82,9 +84,8 @@ void main(int argc, char **argv) {
         server.sin_addr.s_addr = inet_addr(argv[1]);
         bzero(&server.sin_zero, 8);
         // Non Persistent. Always establish 3 way handshake by connect
-        if(connect(sock, (struct sockaddr*) &server, sizeof(server)) < 0){
-            perror("Connection to server failed\n");
-            exit(1);
+        while(connect(sock, (struct sockaddr*) &server, sizeof(server)) < 0){
+            perror("Waiting for server to be Ready...\n");
         }
         printf("TCP connection completed!\n");
         // Send Request for Object i packet
@@ -94,9 +95,14 @@ void main(int argc, char **argv) {
         requestObject.numObjects = htons(i);
         if (nbytes = write(sock, &requestObject, sizeof(Request_Packet)) != sizeof(Request_Packet)) {
             printf("Request for Object %d failed.\n", i);
+            exit(1);
         }
         printf("Ready to receive file %d from server.\n", i);
         close(sock);
+        totalObjectsDownloaded++;
+    }
+    if(totalObjectsDownloaded == 3) {
+        exit(0);
     }
 
 }
