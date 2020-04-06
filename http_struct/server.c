@@ -330,3 +330,6 @@ void main(int argc, char **argv) {
 // https://stackoverflow.com/questions/30582473/send-mp3-file-over-socket-in-c
 // https://www.geeksforgeeks.org/c-program-for-file-transfer-using-udp/
 // https://stackoverflow.com/questions/13215656/c-sendfile-and-send-difference
+
+
+// client do GET Request of object 1
