@@ -5,12 +5,20 @@
 #include <string.h>
 #include <unistd.h>
 #include <arpa/inet.h>
+#include <time.h>
+// #include <sys/time.h>
 
 #define PKT_SIZE 1500
 #define IS_PERSISTENT "closed"
 #define FILE_1 "a.jpg"
 #define FILE_2 "b.mp3"
 #define FILE_3 "c.txt"
+
+long getMicrotime(){
+	struct timeval currentTime;
+	gettimeofday(&currentTime, NULL);
+	return currentTime.tv_sec * (int)1e6 + currentTime.tv_usec;
+}
 
 void main(int argc, char **argv)
 {
@@ -23,7 +31,10 @@ void main(int argc, char **argv)
     bool requestSuccess = false;
     int numberOfObjects;
     FILE *received_file;
-
+    long startTime, endTime, reqDownloadObj, finDownloadObj;
+    long downloadTime[3] = {0};      
+    // 0 --> total time from start to end || 1 --> time taken for first Object || 2--> time taken for 2nd Object || 3 --> time taken for 3rd Object
+    
     if (argc != 3)
     {
         printf("Too few arguments \n");
@@ -51,12 +62,11 @@ void main(int argc, char **argv)
         exit(1);
     }
     printf("TCP connection completed!\n");
-
+    startTime = getMicrotime();
     // creating the HTTP Request Packet to send to server
     sprintf(requestMSG, "GET /index.html HTTP/1.1\r\nHost: %s\r\nConnection: %s\r\n\r\n", argv[1], IS_PERSISTENT);
     printf("============== Send HTTP GET Request ==============\n");
     printf("%s\n", requestMSG);
-
     if (nbytes = write(sock, &requestMSG, sizeof(requestMSG)) != sizeof(requestMSG))
     {
         printf("error sending my HTTP request packet\n");
@@ -77,16 +87,6 @@ void main(int argc, char **argv)
         printf("Status 200, Request Success.\n");
         requestSuccess = true;
     }
-    // char *pktType = strtok(recvData, " ");
-    // while (pktType != NULL)
-    // {
-    //     if (strcmp(pktType, "200") == 0)
-    //     {
-    //         printf("Status 200, Request Success.\n");
-    //         requestSuccess = true;
-    //     }
-    //     pktType = strtok(NULL, " ");
-    // }
     // After reading the HTML file, the client knows that it needs to download 3 objects.
     numberOfObjects = 3;
     // Since it is non persistent, at most 1 object sent over tcp connection. Close the socket
@@ -96,6 +96,7 @@ void main(int argc, char **argv)
     {
         for (int i = 0; i < numberOfObjects; i++)
         {
+            reqDownloadObj = getMicrotime();
             // create a TCP socket
             if ((sock = socket(AF_INET, SOCK_STREAM, 0)) == -1)
             {
@@ -183,8 +184,16 @@ void main(int argc, char **argv)
                 fprintf(stdout, "Receive %d bytes and Remaining:- %d bytes\n", len, incomingFileSize);
             }
             fclose(received_file);
-            // Close the socket after file has been downloaded.
+            
             close(sock);
+            finDownloadObj = getMicrotime();
+            downloadTime[i+1] = finDownloadObj - reqDownloadObj;  
+            
+        }
+        endTime = getMicrotime();
+        downloadTime[0] = endTime - startTime;
+        for (int i = 0; i <= 3; i++) {
+            printf("Index %d == %ld us\n", i, downloadTime[i]);
         }
     }
     else

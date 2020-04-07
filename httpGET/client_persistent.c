@@ -12,6 +12,12 @@
 #define FILE_2 "b.mp3"
 #define FILE_3 "c.txt"
 
+long getMicrotime(){
+	struct timeval currentTime;
+	gettimeofday(&currentTime, NULL);
+	return currentTime.tv_sec * (int)1e6 + currentTime.tv_usec;
+}
+
 void main(int argc, char **argv)
 {
     struct sockaddr_in server;
@@ -23,6 +29,9 @@ void main(int argc, char **argv)
     bool requestSuccess = false;
     int numberOfObjects;
     FILE *received_file;
+    long startTime, endTime, reqDownloadObj, finDownloadObj;
+    long downloadTime[3] = {0};      
+    // 0 --> total time from start to end || 1 --> time taken for first Object || 2--> time taken for 2nd Object || 3 --> time taken for 3rd Object
 
     if (argc != 3)
     {
@@ -51,7 +60,7 @@ void main(int argc, char **argv)
         exit(1);
     }
     printf("TCP connection completed!\n");
-
+    startTime = getMicrotime();
     // creating the HTTP Request Packet to send to server
     sprintf(requestMSG, "GET /index.html HTTP/1.1\r\nHost: %s\r\nConnection: %s\r\n\r\n", argv[1], IS_PERSISTENT);
     printf("============== Send HTTP GET Request ==============\n");
@@ -77,16 +86,6 @@ void main(int argc, char **argv)
         printf("Status 200, Request Success.\n");
         requestSuccess = true;
     }
-    // char *pktType = strtok(recvData, " ");
-    // while (pktType != NULL)
-    // {
-    //     if (strcmp(pktType, "200") == 0)
-    //     {
-    //         printf("Status 200, Request Success.\n");
-    //         requestSuccess = true;
-    //     }
-    //     pktType = strtok(NULL, " ");
-    // }
 
     // After reading the HTML file, the client knows that it needs to download 3 objects
     numberOfObjects = 3;
@@ -95,6 +94,7 @@ void main(int argc, char **argv)
     {
         for (int i = 0; i < numberOfObjects; i++)
         {
+            reqDownloadObj = getMicrotime();
             // Since Persistent, socket is already open from TCP connection. Resuse the same socket
             if (i == 0)
             {
@@ -163,9 +163,16 @@ void main(int argc, char **argv)
                 fprintf(stdout, "Receive %d bytes and Remaining:- %d bytes\n", len, incomingFileSize);
             }
             fclose(received_file);
+            finDownloadObj = getMicrotime();
+            downloadTime[i+1] = finDownloadObj - reqDownloadObj; 
         }
         // After all 3 objects are downloaded, proceed to close the socket.
         close(sock);
+        endTime = getMicrotime();
+        downloadTime[0] = endTime - startTime;
+        for (int i = 0; i <= 3; i++) {
+            printf("Index %d == %ld us\n", i, downloadTime[i]);
+        }
     }
     else
         exit(-1); // Initial HTTP request was not successful.
