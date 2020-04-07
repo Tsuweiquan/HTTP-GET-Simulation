@@ -8,9 +8,9 @@
 
 #define PKT_SIZE 1500
 #define IS_PERSISTENT "keep-alive"
-#define FILE_1 "a_received_persistent.jpg"
-#define FILE_2 "b_received_persistent.mp3"
-#define FILE_3 "c_received_persistent.txt"
+#define FILE_1 "a.jpg"
+#define FILE_2 "b.mp3"
+#define FILE_3 "c.txt"
 
 void main(int argc, char **argv)
 {
@@ -18,6 +18,7 @@ void main(int argc, char **argv)
     int sock, nbytes, incomingFileSize, len;
     char requestMSG[PKT_SIZE];
     char recvData[PKT_SIZE];
+    char path[PKT_SIZE];
     char fileBuffer[BUFSIZ];
     bool requestSuccess = false;
     int numberOfObjects;
@@ -72,16 +73,20 @@ void main(int argc, char **argv)
     printf("%s\n", recvData);
     printf("Received HTTP Response Packet.\n");
     // Check if status 200
-    char *pktType = strtok(recvData, " ");
-    while (pktType != NULL)
-    {
-        if (strcmp(pktType, "200") == 0)
-        {
-            printf("Status 200, Request Success.\n");
-            requestSuccess = true;
-        }
-        pktType = strtok(NULL, " ");
+    if (strstr(recvData, "200") != NULL) {
+        printf("Status 200, Request Success.\n");
+        requestSuccess = true;
     }
+    // char *pktType = strtok(recvData, " ");
+    // while (pktType != NULL)
+    // {
+    //     if (strcmp(pktType, "200") == 0)
+    //     {
+    //         printf("Status 200, Request Success.\n");
+    //         requestSuccess = true;
+    //     }
+    //     pktType = strtok(NULL, " ");
+    // }
 
     // After reading the HTML file, the client knows that it needs to download 3 objects
     numberOfObjects = 3;
@@ -94,18 +99,22 @@ void main(int argc, char **argv)
             if (i == 0)
             {
                 sprintf(requestMSG, "GET /%s HTTP/1.1\r\nHost: %s\r\nConnection: %s\r\n\r\n", FILE_1, argv[1], IS_PERSISTENT);
-                received_file = fopen(FILE_1, "w");
+                strcpy(path, "persistent/");
+                strcat(path, FILE_1);
             }
             else if (i == 1)
             {
                 sprintf(requestMSG, "GET /%s HTTP/1.1\r\nHost: %s\r\nConnection: %s\r\n\r\n", FILE_2, argv[1], IS_PERSISTENT);
-                received_file = fopen(FILE_2, "w");
+                strcpy(path, "persistent/");
+                strcat(path, FILE_2);
             }
             else
             {
                 sprintf(requestMSG, "GET /%s HTTP/1.1\r\nHost: %s\r\nConnection: %s\r\n\r\n", FILE_3, argv[1], IS_PERSISTENT);
-                received_file = fopen(FILE_3, "w");
+                strcpy(path, "persistent/");
+                strcat(path, FILE_3);
             }
+            received_file = fopen(path, "w");
             printf("============== Send HTTP GET Request ==============\n");
             printf("%s", requestMSG);
             // Send GET Request to server
