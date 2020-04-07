@@ -314,7 +314,7 @@ void main(int argc, char **argv)
                 printf("Error Sending Reply\n");
             }
             printf("============== Send HTTP GET Response ==============\n");
-            printf("Sent HTTP Response Packet for Object %d.\n", i + 1);
+            printf("%s\n", responseMSG);
             // now send the file
             offset = 0;
             /* Sending file data */
