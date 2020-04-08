@@ -42,7 +42,7 @@ void main(int argc, char **argv)
         printf("Example: ./client_non_persistent 192.168.1.233 80\n");
         exit(1);
     }
-
+    startTime = getMicrotime();
     // create a TCP socket
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) == -1)
     {
@@ -62,7 +62,7 @@ void main(int argc, char **argv)
         exit(1);
     }
     printf("TCP connection completed!\n");
-    startTime = getMicrotime();
+    
     // creating the HTTP Request Packet to send to server
     sprintf(requestMSG, "GET /index.html HTTP/1.1\r\nHost: %s\r\nConnection: %s\r\n\r\n", argv[1], IS_PERSISTENT);
     printf("============== Send HTTP GET Request ==============\n");
